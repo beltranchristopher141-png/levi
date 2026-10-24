@@ -1,0 +1,202 @@
+/* =========================
+   ESTILO GENERAL
+========================= */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f1e8;
+  color: #3d2b1f;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* =========================
+   CONTENEDOR
+========================= */
+
+#center {
+  min-height: 100vh;
+  padding: 50px 25px;
+  box-sizing: border-box;
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+h2 {
+  text-align: center;
+  font-size: 38px;
+  margin: 0 0 35px;
+  color: #5c3518;
+  letter-spacing: 1px;
+}
+
+/* Decoración debajo del título */
+h2::after {
+  content: "☕  🍔  🥤";
+  display: block;
+  font-size: 22px;
+  margin-top: 10px;
+  letter-spacing: 8px;
+}
+
+/* =========================
+   TABLA
+========================= */
+
+table {
+  width: 95%;
+  max-width: 1150px;
+  margin: auto;
+
+  border-collapse: separate;
+  border-spacing: 0;
+
+  background: white;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 25px rgba(80, 50, 20, 0.15),
+    0 2px 5px rgba(80, 50, 20, 0.08);
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+thead {
+  background: linear-gradient(135deg, #7b3f00, #a85d1a);
+}
+
+th {
+  padding: 18px 14px;
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  text-align: center;
+
+  border: none;
+}
+
+/* =========================
+   CELDAS
+========================= */
+
+td {
+  padding: 15px 14px;
+
+  text-align: center;
+
+  border-bottom: 1px solid #eee2d2;
+
+  font-size: 16px;
+
+  background: white;
+}
+
+/* =========================
+   FILAS
+========================= */
+
+tbody tr {
+  transition: all 0.25s ease;
+}
+
+/* Filas alternadas */
+tbody tr:nth-child(even) td {
+  background: #fffaf3;
+}
+
+/* Efecto al pasar el mouse */
+tbody tr:hover td {
+  background: #fff0d9;
+  transform: scale(1.005);
+}
+
+/* Última fila */
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================
+   PRECIO
+========================= */
+
+td:nth-child(4) {
+  font-weight: bold;
+  color: #7b3f00;
+}
+
+/* =========================
+   TOTAL
+========================= */
+
+td:nth-child(5) {
+  font-weight: bold;
+  color: #198754;
+  font-size: 17px;
+}
+
+/* =========================
+   CANTIDAD
+========================= */
+
+td:nth-child(3) {
+  font-weight: bold;
+}
+
+/* =========================
+   FECHA
+========================= */
+
+td:nth-child(6) {
+  color: #6b625a;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+  #center {
+    padding: 30px 10px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  th,
+  td {
+    padding: 10px 6px;
+  }
+
+  th {
+    font-size: 13px;
+  }
+
+  td {
+    font-size: 13px;
+  }
+
+  td:nth-child(6) {
+    font-size: 11px;
+  }
+}
